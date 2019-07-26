@@ -22,6 +22,10 @@ p {
   line-height: var(--default-line-height);
 }
 
+img {
+  display: block;
+}
+
 /* Button */
 .btn {
   border: solid 3px currentColor;
@@ -176,8 +180,8 @@ p {
 }
 
 /* Products */
-.section-products, .section-portifolio {
-  margin-top: 60px;
+.section-products, .section-portifolio, .section-quality {
+  margin-top: calc(var(--default-space) * 3);
   text-align: center;
 }
 
@@ -191,13 +195,13 @@ p {
 }
 
 /* the list has float in grid class, so we need to clear float */
-.products__cta, .portifolio__cta {
+.products__cta, .portifolio__cta. .quality__cta {
   padding-top: calc(var(--default-space) * 2);
   text-align: center;
   clear: both;
 }
 
-.products__cta p, .portifolio__cta p {
+.products__cta p, .portifolio__cta p, .quality__cta p {
   margin-bottom: var(--default-space);
 }
 
@@ -222,3 +226,31 @@ p {
   color: var(--color-primary);
 }
 
+.section-quality {
+  position: relative;
+}
+
+.section-quality:after {
+  content: '';
+  width: 634px;
+  height: 83px;
+  display: block;
+  background: url("../img/linhas.png") no-repeat center;
+
+  position: absolute;
+  top: 139px;
+  left: 164px;
+  z-index: -1;
+}
+
+.section-quality ul {
+  padding-top: var(--default-space);
+}
+
+.section-quality img {
+  margin: 0 auto;
+}
+
+.section-quality li {
+  padding: 0 calc(var(--default-line-height) * 2);
+}
