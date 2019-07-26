@@ -26,7 +26,7 @@ p {
 .btn {
   border: solid 3px currentColor;
   /*padding: 10px 25px;*/
-  padding: calc(var(--default-space) / 2) calc(var(--default-space)*1.75);
+  padding: calc(var(--default-space) / 2) calc(var(--default-space) * 1.75);
   text-transform: uppercase;
   font-weight: bold;
   font-size: 14px;
@@ -176,7 +176,7 @@ p {
 }
 
 /* Products */
-.section-products {
+.section-products, .section-portifolio {
   margin-top: 60px;
   text-align: center;
 }
@@ -191,12 +191,34 @@ p {
 }
 
 /* the list has float in grid class, so we need to clear float */
-.products__cta {
+.products__cta, .portifolio__cta {
   padding-top: calc(var(--default-space) * 2);
   text-align: center;
   clear: both;
 }
 
-.products__cta p {
+.products__cta p, .portifolio__cta p {
   margin-bottom: var(--default-space);
 }
+
+.section-portifolio {
+  background-color: var(--color-text);
+  padding: calc(var(--default-space) * 2);
+}
+
+.section-portifolio li:last-child {
+  margin-top: var(--default-space);
+}
+
+.section-portifolio .heading--2 {
+  color: var(--color-primary);
+}
+
+.section-portifolio .heading--2:after {
+  background: var(--color-primary);
+}
+
+.portifolio__cta p {
+  color: var(--color-primary);
+}
+
