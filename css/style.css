@@ -121,7 +121,7 @@ img {
   letter-spacing: .1em;
   font-size: 14px;
   line-height: var(--default-line-height);
-  padding: 10px 0;
+  padding: calc(var(--default-space) * 1.5) 0;
   transition: color .2s ease-in-out;
 }
 
@@ -180,8 +180,11 @@ img {
 }
 
 /* Products */
-.section-products, .section-portifolio, .section-quality {
-  margin-top: calc(var(--default-space) * 3);
+.section-products,
+.section-portifolio,
+.section-quality,
+.section-break {
+  margin-top: var(--default-space);
   text-align: center;
 }
 
@@ -195,8 +198,8 @@ img {
 }
 
 /* the list has float in grid class, so we need to clear float */
-.products__cta, .portifolio__cta. .quality__cta {
-  padding-top: calc(var(--default-space) * 2);
+.products__cta, .portifolio__cta, .quality__cta {
+  padding: calc(var(--default-space) * 2) 0;
   text-align: center;
   clear: both;
 }
@@ -207,7 +210,7 @@ img {
 
 .section-portifolio {
   background-color: var(--color-text);
-  padding: calc(var(--default-space) * 2);
+  padding: var(--default-space);
 }
 
 .section-portifolio li:last-child {
@@ -253,4 +256,67 @@ img {
 
 .section-quality li {
   padding: 0 calc(var(--default-line-height) * 2);
+}
+
+.section-break {
+  background: url("../img/bg-footer.jpg") no-repeat center;
+  background-size: cover;
+  height: 220px;
+  width: 100%;
+  padding-top: calc(var(--default-space) * 2.75);
+}
+
+.section-break .quote--external {
+  max-width: 400px;
+}
+
+.footer {
+  width: 100%;
+  background-color: var(--color-text);
+  color: var(--color-white);
+  padding-bottom: var(--default-space);
+}
+
+.footer h3 {
+  text-align: left;
+  color: var(--color-primary);
+}
+
+.footer h3::after {
+  margin: 5px 0 0 0;
+  background-color: var(--color-primary);
+}
+
+.footer__history {
+  padding-right: calc(var(--default-space) * 2)
+}
+
+.footer__contact ul li {
+  font-size: 14px;
+  line-height: var(--default-line-height);
+}
+
+.footer__social-urls ul li {
+  display: inline-block;
+}
+
+.footer__social-urls ul li + li {
+  margin-left: calc(var(--default-space) / 2);
+}
+
+.footer__social-urls a {
+  border: solid 3px var(--color-primary);
+  display: block;
+  padding: 10px;
+  transition: all .3s ease-in-out;
+}
+
+.footer__social-urls a:hover {
+  border: solid 3px var(--color-white);
+  transform: scale(1.1);
+}
+
+.footer__copyright {
+  background-color: var(--color-primary);
+  padding: var(--default-space) 0;
 }
