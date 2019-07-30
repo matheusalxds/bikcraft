@@ -82,6 +82,10 @@ img {
   margin: 8px auto;
 }
 
+.heading--1 {
+  font-size: 48px;
+}
+
 .heading--2 {
   font-size: 24px;
 }
@@ -113,6 +117,9 @@ img {
 .header__nav ul li + li {
   margin-left: 25px;
 }
+.header__nav ul li a.header__active {
+  color: var(--color-white);
+}
 
 .header__nav ul li a {
   color: var(--color-text);
@@ -138,7 +145,7 @@ img {
   background-size: cover;
   margin-top: var(--header-height);
   text-align: center;
-  padding-top: 80px;
+  padding-top: var(--header-height);
 }
 
 .section-intro h1 {
@@ -231,6 +238,7 @@ img {
 
 .section-quality {
   position: relative;
+  overflow: auto; /* clear fix */
 }
 
 .section-quality:after {

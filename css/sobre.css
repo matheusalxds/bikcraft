@@ -1,0 +1,50 @@
+.section-intro-about {
+  background-color: var(--color-primary);
+  width: 100%;
+  height: 160px;
+  margin-top: var(--header-height);
+  padding-top: calc(var(--header-height) / 2);
+  background-size: cover;
+  text-align: center;
+}
+
+.section-intro-about h1, .section-intro-about p {
+  color: var(--color-white);
+}
+
+.section-intro-about h1::after {
+  background-color: var(--color-white);
+  margin: 20px auto;
+}
+
+.section-intro-about__bg {
+  background: url("../img/sobre/sobre-bg.jpg") no-repeat center;
+}
+
+.section-mission-about {
+  padding-top: calc(var(--default-space) * 3);
+}
+
+.section-mission-about__bg {
+  margin-top: calc(var(--default-space) * 2);
+}
+
+.section-mission-about p {
+  padding-right: calc(var(--default-space) * 3);
+}
+
+.section-mission-about h2:after {
+  margin: calc(var(--default-space) / 2) 0;
+}
+
+.section-mission-about p,
+.section-mission-about ul li
+{
+  font-size: 18px;
+  line-height: 1.5em;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.section-mission-about p + p {
+  margin-top: 1em;
+}
