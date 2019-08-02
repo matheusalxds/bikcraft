@@ -34,6 +34,7 @@
 .section-intro-products__bg {
   background: url("../img/produtos/produtos-bg.jpg") no-repeat center;
   background-size: cover;
+  padding: var(--default-space) 0;
 }
 
 .section-intro-products__icon {
@@ -69,11 +70,103 @@
   height: 48px;
   padding-top: 16px;
 }
+
 .section-intro-products__info ul li:nth-child(1),
-.section-intro-products__info ul li:nth-child(2){
+.section-intro-products__info ul li:nth-child(2) {
   margin-bottom: 2px;
 }
 
 .section-intro-products__info ul li:nth-child(even) {
-  margin-left:2px;
+  margin-left: 2px;
+}
+
+.section-intro-products__budget {
+  background: var(--color-black);
+  padding: calc(var(--default-space) * 2) 0;
+  margin: calc(var(--default-space) * 3) 0 calc(var(--default-space) * -1) 0;
+}
+
+.section-intro-products__budget h2 {
+  text-align: center;
+  color: var(--color-primary);
+}
+
+.section-intro-products__budget h2::after {
+  background: var(--color-primary);
+}
+
+.section-intro-products__budget form {
+  padding-right: calc(var(--default-space) * 3);
+}
+
+.section-intro-products__budget input,
+.section-intro-products__budget label {
+  color: var(--color-white);
+  display: block;
+}
+
+.section-intro-products__budget label {
+  font-family: var(--font-georgia);
+}
+
+.section-intro-products__budget input:not(last-child) {
+  margin-bottom: var(--default-space);
+  margin-top: 6px;
+}
+
+.section-intro-products__budget input,
+.section-intro-products__budget textarea {
+  width: 100%;
+  border: solid 4px var(--color-primary);
+  background: none;
+  padding: 5px;
+}
+
+.section-intro-products__budget textarea {
+  height: 150px;
+  margin-top: 6px;
+}
+
+.section-intro-products__budget button {
+  background: none;
+  margin-top: var(--default-space);
+}
+
+.section-intro-products__budget h3,
+.section-intro-products__budget h4,
+.section-intro-products__budget h3::after,
+.section-intro-products__budget h4::after {
+  color: var(--color-primary);
+  margin: calc(var(--default-space) / 2) 0;
+}
+
+.section-intro-products__budget h3::after,
+.section-intro-products__budget h4::after {
+  background: var(--color-primary);
+}
+
+.section-intro-products__budget span,
+.section-intro-products__budget ul li,
+.section-intro-products__budget p {
+  display: block;
+  font-size: 18px;
+  line-height: calc(var(--default-line-height) * 1.5);
+  font-family: var(--font-georgia);
+  color: var(--color-white);
+}
+
+.section-intro-products__budget ul li {
+  padding: 0 var(--default-space);
+}
+
+.section-intro-products__budget ul li:nth-child(odd) {
+  background: #1d1d1d;
+}
+
+.section-intro-products__budget span + span {
+  margin-bottom: calc(var(--default-space) * 3.25);
+}
+
+.section-intro-products__budget ul li {
+  font-size: 14px;
 }
