@@ -2,22 +2,25 @@
 :root {
   --color-primary: #fec63e;
   --color-text: #000;
+  --color-black: #000;
   --color-white: #fff;
   --header-height: 80px;
 
   --default-space: 20px;
 
   --default-line-height: 20px;
+
+  --font-georgia: Georgia, "Times New Roman", serif;
 }
 
 /* General config */
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-georgia);
 }
 
 p {
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: var(--font-georgia);
   font-size: 14px;
   line-height: var(--default-line-height);
 }
@@ -45,6 +48,7 @@ img {
 
 .btn--white:hover {
   color: var(--color-primary);
+  transform: scale(1.1);
 }
 
 .btn--primary {
@@ -53,6 +57,7 @@ img {
 
 .btn--primary:hover {
   color: var(--color-text);
+  transform: scale(1.1);
 }
 
 .btn--primary--bg-black {
@@ -61,6 +66,7 @@ img {
 
 .btn--primary--bg-black:hover {
   color: var(--color-text);
+  transform: scale(1.1);
 }
 
 /* Heading */
@@ -117,6 +123,7 @@ img {
 .header__nav ul li + li {
   margin-left: 25px;
 }
+
 .header__nav ul li a.header__active {
   color: var(--color-white);
 }
@@ -188,10 +195,8 @@ img {
 
 /* Products */
 .section-products,
-.section-portifolio,
 .section-quality,
 .section-break {
-  margin-top: var(--default-space);
   text-align: center;
 }
 
@@ -199,9 +204,17 @@ img {
   background: var(--color-primary);
 }
 
+.products__list p {
+  margin: var(--default-space) calc(var(--default-space) * 1.5) calc(var(--default-space) * 1.5) calc(var(--default-space) * 1.5);
+}
+
 .products__img {
   background-color: var(--color-text);
   padding: 20px;
+}
+
+.products__img img {
+  margin: 0 auto;
 }
 
 /* the list has float in grid class, so we need to clear float */
@@ -230,6 +243,7 @@ img {
 
 .section-portifolio .heading--2:after {
   background: var(--color-primary);
+  margin: 20px 0;
 }
 
 .portifolio__cta p {
